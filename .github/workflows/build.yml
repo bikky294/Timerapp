@@ -30,8 +30,8 @@ jobs:
     - name: Build Android APK
       run: cordova build android --release
 
-    - name: List APK folder contents
-      run: ls -R platforms/android/app/build/outputs/apk/
+    - name: List full build folder contents
+      run: ls -R platforms/android/app/build/
 
     - name: Upload APK artifact
       uses: actions/upload-artifact@v4
