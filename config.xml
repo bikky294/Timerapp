@@ -1,11 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.yourname.timer" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>TimerApp</name>
-    <description>Sample Apache Cordova App</description>
+<widget id="com.yourname.easytimer"
+        version="1.0.0"
+        xmlns="http://www.w3.org/ns/widgets"
+        xmlns:cdv="http://cordova.apache.org/ns/1.0">
+
+    <name>EasyTimer</name>
+    <description>A simple timer application built with Cordova</description>
     <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
         Apache Cordova Team
     </author>
+
     <content src="index.html" />
+
+    <!-- Permissions -->
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+
+    <!-- Android-specific icon -->
+    <platform name="android">
+        <icon src="www/res/icon/icon.png" />
+    </platform>
+
 </widget>
+
