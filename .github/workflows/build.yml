@@ -36,16 +36,15 @@ jobs:
     - name: Add Android platform
       run: cordova platform add android
 
-    - name: Build Android APK
-      run: cordova build android --release || cordova build android
+    - name: Build Android APK (debug for now)
+      run: cordova build android
 
-    - name: List APK folder contents
-      run: ls -R platforms/android/app/build/outputs/apk/ || echo "No APK folder found"
+    - name: Show full outputs directory
+      run: ls -R platforms/android/app/build/outputs || echo "No outputs found"
 
     - name: Upload APK artifact
       uses: actions/upload-artifact@v4
       with:
         name: android-apk
         path: |
-          platforms/android/app/build/outputs/apk/release/*.apk
-          platforms/android/app/build/outputs/apk/debug/*.apk
+          platforms/android/app/build/outputs/**/*.apk
